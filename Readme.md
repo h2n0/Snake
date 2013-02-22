@@ -5,7 +5,7 @@ but other than that this is purely a clone.
 ## Other things
 the game is owened by me and other associates. <br>
 You may use the code from this game in your own project(s)<br>
-but you must give credit to Indie Pixle upon doing so 
+but you must give credit to Me (h2n0) upon doing so 
 
 ### Side notes
 

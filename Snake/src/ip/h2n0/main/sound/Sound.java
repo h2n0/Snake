@@ -5,8 +5,7 @@ import java.applet.AudioClip;
 
 public class Sound {
 
-    public static final Sound eatl = new Sound("/eat30.wav");
-    public static final Sound eath = new Sound("/eat40.wav");
+    public static final Sound eat = new Sound("/eat.wav");
 
     private AudioClip clip;
 

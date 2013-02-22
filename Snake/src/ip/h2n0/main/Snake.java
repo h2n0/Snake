@@ -50,7 +50,6 @@ public class Snake extends JPanel implements Runnable, KeyListener {
     public boolean menu = true;
 
     public double mult = 1.0D;
-    private int mu = 1;
 
     public Snake() {
         this.setPreferredSize(dim);
@@ -228,26 +227,15 @@ public class Snake extends JPanel implements Runnable, KeyListener {
             difficulty--;
             addScore(10);
             newFood();
-            playSound(mu);
+            playSound();
             // plusColour();
         } else {
             snakeBody.pop();
         }
     }
     
-    public void playSound(int times){
-        switch(times){
-        case 1:
-            Sound.eath.play();
-            this.mu++;
-            break;
-        case 2:
-            Sound.eatl.play();
-            this.mu = 1;
-            break;
-        
-        
-        }
+    public void playSound(){
+        Sound.eat.play();
     }
 
     public void addScore(int score) {
@@ -339,7 +327,7 @@ public class Snake extends JPanel implements Runnable, KeyListener {
         if ((code == KeyEvent.VK_ENTER || code == KeyEvent.VK_SPACE)) {
             if (menu) {
                 menu = false;
-                Sound.eath.play();
+                playSound();
                 start();
             } else if(!menu && gameOver){
                 reset();
